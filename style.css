@@ -1,20 +1,71 @@
-#timetable {
-  margin-top: 40px;
-  width: 100%;
-  border-collapse: collapse;
+/* ----- Global Body ----- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d; /* dark black */
+  color: #f2f2f2; /* light text */
+  padding: 20px;
+  position: relative;
 }
 
-#timetable th, 
-#timetable td {
-  border: 1px solid black;
-  padding: 8px;
+/* ----- Header ----- */
+h1 {
+  text-align: center;
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+/* ----- Date & Time Top Right ----- */
+#datetime {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: #ffcc00;
+  text-shadow:
+    0 0 5px #ffcc00,
+    0 0 10px #ffcc00,
+    0 0 15px #ffcc00;
+}
+
+/* ----- Table ----- */
+#timetable {
+  margin-top: 60px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #ff00ff,
+    0 0 30px #00ff00,
+    0 0 40px #ff0000; /* 4 auras */
+}
+
+#timetable th, #timetable td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
 }
 
 #timetable th {
-  background-color: #f2f2f2;
+  background-color: #1a1a1a;
+  color: #00ffff;
+  text-shadow:
+    0 0 3px #00ffff,
+    0 0 5px #00ffff;
 }
 
+/* ----- Cross passed events ----- */
 .passed {
   text-decoration: line-through;
-  color: gray;
+  color: #888;
+  text-shadow: 0 0 3px #888;
+}
+
+/* ----- Hover aura ----- */
+#timetable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px #00ffff;
 }
